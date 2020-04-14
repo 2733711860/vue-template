@@ -24,7 +24,12 @@
     <meCheckbox class="item" :options="checkboxList" v-model='checkboxValue'></meCheckbox>
 
     <!--步骤条-->
-    <me-step class="item" :Steps='steps' :SetData='stepList'></me-step>
+    <div class="item">
+    	<me-step :currentVal='steps' :stepArray='stepList'
+	    	model="dot"></me-step>
+	    <me-step :currentVal='steps' :stepArray='stepList'
+	    	model="origin"></me-step>
+    </div>
 
     <!--图标-->
     <me-icon class="item" name="right" size="30" @click="click"></me-icon>
@@ -141,6 +146,18 @@
 	  		@onChange="sliderchange"></me-slider>
     </div>
 
+    <!--进度条-->
+    <div class="item">
+    	<me-progress
+    		:percentage="70"
+    		type="line"
+    		strokeLinecap="round"></me-progress>
+    	<me-progress
+    		:percentage="70"
+    		type="circle"
+    		strokeLinecap="round"></me-progress>
+    </div>
+
     <!--树形图-->
     <div class="item" @click="$router.push({path: '/progress'})">树形图</div>
 
@@ -206,7 +223,7 @@ export default {
 			checkboxList: [ { text: '中国', value: '1' }, { text: '日本', value: '2' } ], // 多选列表
 			checkboxValue: [], // 多选值
 			steps: 2, // 当前步骤数
-			stepList: ["苏妲己", "姜子牙", "哪吒", "杨戬", '孙悟空', '武庚', '雷震子'], // 步骤列表
+			stepList: ["苏妲己苏妲己", "姜子牙", "哪吒", "杨戬", '孙悟空', '武庚', '雷震子'], // 步骤列表
 			inputvalue: '张三',
 			textareValue: '',
 			showPopup: false,

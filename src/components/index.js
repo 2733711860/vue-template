@@ -31,6 +31,7 @@ import meRollNotice from './me-roll-notice'
 import meCollapse from './me-collapse'
 import meCollapseItem from './me-collapse/me-collapse-item'
 import mePagination from './me-pagination'
+import meProgress from './me-progress'
 
 // 定义组件集合
 const components = {
@@ -65,7 +66,8 @@ const components = {
   meRollNotice,
   meCollapse,
 	meCollapseItem,
-	mePagination
+	mePagination,
+	meProgress
 }
 
 // 全局注册组件
