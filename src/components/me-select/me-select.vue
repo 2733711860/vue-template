@@ -23,8 +23,8 @@ export default {
 	data () {
 		return {
 			show: false,
-			selectValue: '',
-			chooseText: '请选择',
+			selectValue: this.value,
+			chooseText: this.selectList.filter(item => item.value == this.value)[0] ? this.selectList.filter(item => item.value == this.value)[0].text : '请选择',
 			bottheig: 'auto'
 		}
 	},
@@ -49,7 +49,6 @@ export default {
 		}
 	},
 	mounted () {
-		this.selectValue = this.value
 	},
 	methods: {
 		async toggle () {

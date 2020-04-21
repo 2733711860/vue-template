@@ -207,6 +207,15 @@
 
     <!--分页-->
     <div class="item" @click="$router.push({path: '/pagination'})">分页</div>
+
+    <!--表格-->
+    <div class="item" @click="$router.push({path: '/table'})">表格</div>
+
+    <!--九宫格抽奖-->
+    <div class="item" @click="$router.push({path: '/lottery'})">九宫格抽奖</div>
+
+    <!--转盘抽奖-->
+    <div class="item" @click="$router.push({path: '/lotteryTurn'})">转盘抽奖</div>
   </div>
 </template>
 

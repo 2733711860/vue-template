@@ -142,5 +142,35 @@ export default [
     meta: {
       title: '分页'
     }
+  },
+  {
+    path: '/table',
+    name: 'table',
+    component: resolve => {
+      require(['@/views/table/index.vue'], resolve)
+    },
+    meta: {
+      title: '表格'
+    }
+  },
+  {
+    path: '/lottery',
+    name: 'lottery',
+    component: resolve => {
+      require(['@/views/lottery/index.vue'], resolve)
+    },
+    meta: {
+      title: '抽奖'
+    }
+  },
+  {
+    path: '/lotteryTurn',
+    name: 'lotteryTurn',
+    component: resolve => {
+      require(['@/views/lotteryTurn/index.vue'], resolve)
+    },
+    meta: {
+      title: '转盘抽奖'
+    }
   }
 ]

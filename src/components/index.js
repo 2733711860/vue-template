@@ -32,6 +32,9 @@ import meCollapse from './me-collapse'
 import meCollapseItem from './me-collapse/me-collapse-item'
 import mePagination from './me-pagination'
 import meProgress from './me-progress'
+import meTable from './me-table'
+import meLottery from './me-lottery'
+import meLotteryTurn from './me-lottery-turn'
 
 // 定义组件集合
 const components = {
@@ -67,7 +70,10 @@ const components = {
   meCollapse,
 	meCollapseItem,
 	mePagination,
-	meProgress
+	meProgress,
+	meTable,
+	meLottery,
+	meLotteryTurn
 }
 
 // 全局注册组件
