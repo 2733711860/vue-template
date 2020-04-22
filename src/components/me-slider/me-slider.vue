@@ -611,13 +611,14 @@
 </script>
 
 <style lang="less" scoped>
+@import url("../../assets/css/index.less");
 	.v-slider-wrap {
 		// width: 100%;
 		// height: 4px;
 		// margin: 16px 0;
 		display: flex;
 		align-items: center;
-		background-color: #e8eaec;
+		background-color: @me-bg-lighter;
 		border-radius: 3px;
 		vertical-align: middle;
 		position: relative;
@@ -625,7 +626,7 @@
 		user-select: none;
 		.v-slider-bar {
 			// height: 4px;
-			background-color: #57a3f3;
+			background-color: @me-active;
 			border-radius: 3px;
 			position: absolute;
 		}
@@ -636,11 +637,11 @@
 			height: 8px;
 			margin-left: -4px;
 			background-color: #fff;
-			border: 2px solid #e8e8e8;
+			border: 2px solid @me-active;
 			border-radius: 50%;
 			cursor: pointer;
 			&.active {
-				border-color: #57a3f3;
+				border-color: @me-active;
 			}
 		}
 		.v-slider-dot-vertical {

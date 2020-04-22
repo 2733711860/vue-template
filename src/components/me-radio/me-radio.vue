@@ -41,14 +41,15 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped="scoped" lang="less">
+	@import url("../../assets/css/index.less");
 	.checkbox01{
 		padding: 8px 0;
 		display: flex;
 		align-items: center;
 	}
 	.checkbox01 input[type="radio"]:checked+label::before {
-		background-color: #f07000;
+		background-color: @me-active;
 		/* 选中的背景颜色 */
 		padding: 4px;
 		background-clip: content-box;
@@ -69,7 +70,7 @@ export default {
 		height: 11px;
 		margin-right: 8px;
 		border-radius: 50%;
-		border: 1px solid #f07000;
+		border: 1px solid @me-active;
 		text-indent: 2px;
 		line-height: .65;
 		/*行高不加单位，子元素将继承数字乘以自身字体尺寸而非父元素行高*/

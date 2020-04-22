@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style scoped="scoped" lang="less">
-
+@import url("../../assets/css/index.less");
 /**蒙层*/
 .left_slide_center_nav .center_mask {
   position: fixed;
@@ -57,7 +57,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0,0,0,.6);
+  background: @me-bg-overlay;
   z-index: 1000;
   display: none;
 }
@@ -73,7 +73,7 @@ export default {
   z-index: 1001;
   /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
   overflow-y: scroll;
-  background: #fff;
+  background: @me-bg-normal;
 }
 
 /**显示蒙层和内容 使用父级.show样式控制*/

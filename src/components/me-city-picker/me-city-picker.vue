@@ -220,7 +220,7 @@
     overflow: hidden
     text-align: center
     font-size: 14px
-    background-color: rgba(37, 38, 45, .4)
+    background-color: rgba(51, 51, 51, .8)
     &.picker-fade-enter, &.picker-fade-leave-active
       opacity: 0
     &.picker-fade-enter-active, &.picker-fade-leave-active
@@ -256,7 +256,7 @@
           font-size: 14px
         .confirm
           right: 0
-          color: #007bff
+          color: #20a0ff
           &:active
             color: #5aaaff
         .cancel

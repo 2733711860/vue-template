@@ -305,7 +305,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped="scoped">
 .ly-tabbar {
   position: relative;
   background-color: rgba(255 ,255, 255, .8);

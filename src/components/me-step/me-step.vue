@@ -65,7 +65,8 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped="scoped" lang="less">
+	@import url("../../assets/css/index.less");
 	.steps {
 	  position: relative;
 	  counter-reset: step; /*创建步骤数字计数器*/
@@ -86,10 +87,10 @@ export default {
 	  counter-increment: step; /*计数器值递增*/
 	  width: 32px;
 	  height: 32px;
-	  background-color: #007aff;
+	  background-color: @me-active;
 	  line-height: 32px;
 	  border-radius: 32px;
-	  color: #fff;
+	  color: @font-color-white;
 	  text-align: center;
 	  font-weight: 700;
 	  margin: 0 auto 8px auto;
@@ -99,10 +100,10 @@ export default {
 	  content: "\2713" !important; /*设定计数器内容*/
 	  width: 32px;
 	  height: 32px;
-	  background-color: #007aff;
+	  background-color: @me-active;
 	  line-height: 32px;
 	  border-radius: 32px;
-	  color: #fff;
+	  color: @font-color-white;
 	  text-align: center;
 	  font-weight: 700;
 	  margin: 0 auto 8px auto;
@@ -113,7 +114,7 @@ export default {
 	  content: "";
 	  width: 100%;
 	  height: 2px;
-	  background-color: #007aff;
+	  background-color: @me-active;
 	  position: absolute;
 	  left: -50%;
 	  top: 15px;
@@ -123,7 +124,7 @@ export default {
 	/*将当前/完成步骤之前的数字及连接线变绿*/
 	.steps li.active:before,
 	.steps li.active:after {
-	  background-color: #007aff;
+	  background-color: @me-active;
 	}
 	.steps li div{
 		overflow: hidden;
@@ -132,14 +133,14 @@ export default {
 	/*将当前/完成步骤之后的数字及连接线变灰*/
 	.steps li.active ~ li:before,
 	.steps li.active ~ li:after {
-	  background-color: #dddee3;
+	  background-color: @me-bg-lighter;
 	}
 	.steps li div{
 		width: 100px;
 	}
 
 	.me-steps {
-		background: #fff;
+		background: @me-bg-normal;
 		display: flex;
 		/*justify-content: space-evenly;*/
 		align-items: flex-start;
@@ -172,11 +173,11 @@ export default {
 	}
 
 	.color-pick {
-		background: #007aff;
+		background: @me-active;
 	}
 
 	.color-no-pick {
-		background: #dddee3;
+		background: @me-bg-lighter;
 	}
 
 	.color-error-pick-1 {
@@ -184,7 +185,7 @@ export default {
 	}
 
 	.color-error-pick-2 {
-		background-image: linear-gradient( 90deg, #007aff 0%, #8091ff 60%, #b377f6 100%);
+		background-image: linear-gradient( 90deg, @me-active 0%, #8091ff 60%, #b377f6 100%);
 	}
 
 	.width-100 {
@@ -196,7 +197,6 @@ export default {
 
 	.title {
 		width: 100px;
-		color: #4a4a4a;
 	}
 
 	.width-2 {
@@ -240,7 +240,7 @@ export default {
 		content: "";
 		width: 8px;
 		height: 8px;
-		background: #dddee3;
+		background: @me-bg-lighter;
 		position: absolute;
 		top: -2px;
 		z-index: 1;
@@ -255,7 +255,6 @@ export default {
 		content: "";
 		width: 12px;
 		height: 12px;
-		background: rgba(0, 122, 255, 0.15);
 		position: absolute;
 		top: -2px;
 		z-index: 1;
@@ -269,7 +268,6 @@ export default {
 		content: "";
 		width: 12px;
 		height: 12px;
-		background: rgba(223, 48, 49, 0.15);
 		position: absolute;
 		top: -2px;
 		z-index: 1;

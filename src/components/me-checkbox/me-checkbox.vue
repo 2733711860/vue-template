@@ -40,7 +40,8 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped="scoped" lang="less">
+	@import url("../../assets/css/index.less");
 	.checkbox_x label{
 		display: flex;
 		align-items: center;
@@ -61,22 +62,22 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    background: #fff;
+    background: @me-bg-normal;
     width: 100%;
     height: 100%;
-    border: 1px solid #f07000;
+    border: 1px solid @me-active;
     border-radius: 4px;
 	}
 	input[type="checkbox"]:checked::before {
     content: "\2713";
-    background-color: #fff;
+    background-color: @me-bg-normal;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    border: 1px solid #f07000;
+    border: 1px solid @me-active;
     border-radius:4px;
-    color: #f07000;
+    color: @me-active;
     font-weight: bold;
 	}
 </style>

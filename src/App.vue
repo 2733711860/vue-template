@@ -35,5 +35,9 @@ export default {
 };
 </script>
 
+<style lang="less">
+	@import url("./assets/css/index.less");
+</style>
+
 
 

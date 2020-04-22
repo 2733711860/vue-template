@@ -79,7 +79,7 @@ export default {
 <style scoped="scoped">
 	.content{
 	flex: 1;
-	background-color: #fafafa;
+	background-color: @me-bg-light;
 	overflow: hidden;
 	box-sizing: border-box;
 }
@@ -96,7 +96,6 @@ export default {
 	height: 44px;
 	line-height: 44px;
 	text-align: center;
-	color: #6A9FB5;
 	border-bottom: 1px solid #eee;
 	position: relative;
 }

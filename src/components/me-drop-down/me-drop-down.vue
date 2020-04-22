@@ -93,7 +93,8 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped="scoped" lang="less">
+	@import url("../../assets/css/index.less");
 .me_dropdown {
   position: relative;
   width: 100%;
@@ -103,7 +104,7 @@ export default {
 	position: absolute;
 	z-index: 10;
 	width: 100vw;
-	background: rgba(0, 0, 0, 0.7);
+	background: @me-bg-overlay;
 }
 .me_dropdown_va{
 	height: 100%;

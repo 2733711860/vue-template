@@ -18,12 +18,22 @@ Loading.install = function (Vue) {
         // 如果loading还在，则不再执行
         return
       }
-      loadingNode = new LoadingConstructor({
-        data: {
-          isShowLoading: showLoading,
-          content: tips
-        }
-      })
+      if ((typeof tips) == 'object') {
+      	loadingNode = new LoadingConstructor({
+      	  data: {
+      	    isShowLoading: showLoading,
+      	    content: tips.text,
+      	    dataLoader: tips.spinnerType
+      	  }
+      	})
+      } else {
+      	loadingNode = new LoadingConstructor({
+      	  data: {
+      	    isShowLoading: showLoading,
+      	    content: tips
+      	  }
+      	})
+      }
       loadingNode.$mount() // 挂在实例，为了获取下面的loadingNode.$el
       document.body.appendChild(loadingNode.$el)
       loadingNode.isShowLoading = showLoading = true

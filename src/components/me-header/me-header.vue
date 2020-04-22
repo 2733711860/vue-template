@@ -44,12 +44,13 @@ export default {
 </script>
 
 <style scoped="scoped" lang="less">
+@import url("../../assets/css/index.less");
 .me-header{
 	display: flex;
 	height: 50px;
 	align-items: center;
 	justify-content: space-between;
-	background-color: #35495e;
+	background-color: @font-color-white;
 	div{
 		height: 100%;
 		display: flex;
@@ -59,10 +60,10 @@ export default {
 	.header-left{
 		width: 15%;
 		font-size: 30px;
-		color: #ccc;
+		color: @font-color-active;
 	}
 	.header-center{
-		color: #FFFFFF;
+		color: @font-color-normal;
 		width: 70%;
 		text-align: center;
 		display: inline-block;
@@ -73,7 +74,7 @@ export default {
 	.header-right{
 		width: 15%;
 		font-size: 23px;
-		color: #ccc;
+		color: @font-color-active;
 	}
 }
 </style>

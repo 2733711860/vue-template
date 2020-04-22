@@ -4,6 +4,7 @@ import App from "./App.vue";
 import router from "./router/index";
 // import "@/assets/style/font/iconfont.css";
 import "@/assets/style/index.less";
+import "./assets/css/index.less";
 import $axios from "@/utils/request";
 //import mixin from "./mixin/index";
 import store from "./store/index";

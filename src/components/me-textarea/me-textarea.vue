@@ -83,6 +83,7 @@ export default {
 </script>
 
 <style scoped="scoped" lang="less">
+@import url("../../assets/css/index.less");
 	.me_textarea{
 		display: flex;
 		flex-flow: column;
@@ -90,7 +91,7 @@ export default {
 		.textarea{
 			outline: none;
 			padding: 8px 12px;
-			background-color: #FFFFFF;
+			background-color: @me-bg-normal;
 			border: none;
 			line-height: 22px;
 		}
@@ -98,7 +99,7 @@ export default {
 	.me_count{
 		padding: 5px 10px;
 		text-align: right;
-		background-color: #FFFFFF;
-		color: #B2B2B2;
+		background-color: @me-bg-normal;
+		color: @font-color-lighter;
 	}
 </style>

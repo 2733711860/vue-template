@@ -38,6 +38,7 @@ export default {
 </script>
 
 <style scoped="scoped" lang="less">
+@import url("../../assets/css/index.less");
 	.me_cell{
 		display: flex;
 		align-items: center;
@@ -55,7 +56,7 @@ export default {
 		.me_cell_right{
 			flex: 1;
 			height: 40px;
-			color: rgba(0, 0, 0, .6);
+			color: @font-color-light;
 			display: flex;
 			justify-content: flex-end;
 			align-items: center;

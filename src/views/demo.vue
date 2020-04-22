@@ -452,7 +452,11 @@ export default {
   },
 	methods: {
 		showLoading() {
-			this.$loading.show('hello world')
+//			this.$loading.show({
+//				text: '加载中...',
+//				spinnerType: 'satellite'
+//			})
+			this.$loading.show('加载中...')
 			setTimeout(() => {
 				this.$loading.hide()
 			}, 3000)

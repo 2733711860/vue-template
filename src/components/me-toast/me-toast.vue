@@ -16,7 +16,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="less">
+@import url("../../assets/css/index.less");
 .toast-container {
   position: fixed;
   top: 0;
@@ -32,7 +33,7 @@ export default {
   transform: translate(-50%, -50%);
   padding: 10px 15px;
   border-radius: 5px;
-  background: rgba(0, 0, 0, .7);
-  color: #FFFFFF;
+  background: @me-bg-shadow;
+  color: @font-color-white;
 }
 </style>

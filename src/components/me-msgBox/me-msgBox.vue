@@ -72,7 +72,8 @@ export default {
 }
 </script>
 
-<style scoped="scoped">
+<style scoped="scoped" lang="less">
+@import url("../../assets/css/index.less");
 .md-modal {
 	position: fixed;
 	top: 50%;
@@ -103,7 +104,7 @@ export default {
 	left: 0;
 	z-index: 1000;
 	opacity: 0;
-	background: rgb(51, 51, 51);
+	background: @me-bg-overlay;
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
 	transition: all 0.3s;
@@ -115,7 +116,7 @@ export default {
 }
 
 .md-content {
-	background: #FFFFFF;
+	background: @me-bg-normal;
 	position: relative;
 	border-radius: 5px;
 	margin: 0 auto;
@@ -141,7 +142,7 @@ export default {
 	font-weight: bold;
 	padding: 15px 0;
 	text-align: center;
-	font-size: 18px;
+	font-size: @font-size-lg;
 	/*border-bottom: 1px solid #DFDFDF;*/
 }
 .md-content-content{
@@ -150,7 +151,7 @@ export default {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: rgba(0, 0, 0, .8);
+	color: @font-color-light;
 }
 .md-content-oneBtn{
 	border-top: 1px solid #DFDFDF;
@@ -162,7 +163,7 @@ export default {
 	text-align: center;
 }
 .sure-btn{
-	color: #007AFF;
+	color: @font-color-active;
 }
 .cancle-btn{
 	border-right: 1px solid #DFDFDF;

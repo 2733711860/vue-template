@@ -52,7 +52,6 @@ export default {
 	.slide-item {
 		width: 100%;
 		height: 100%;
-		background: #ECE7D4;
 		line-height: 65px;
 		padding-left: 10px;
 		box-sizing: border-box;

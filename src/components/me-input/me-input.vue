@@ -105,11 +105,12 @@ export default {
 </script>
 
 <style scoped="scoped" lang="less">
+@import url("../../assets/css/index.less");
 	.me_input{
 		padding: 15px 8px;
 		display: flex;
 		align-items: center;
-		background-color: #FFFFFF;
+		background-color: @me-bg-normal;
 		border-bottom: 1px solid #DDDDDD;
 		.me_input_left{
 			display: flex;
@@ -130,7 +131,7 @@ export default {
 				-moz-box-sizing: border-box; /*火狐*/
 				outline: none;
 				border: none;
-				background-color: #FFFFFF;
+				background-color: @me-bg-normal;
 			}
 			.clearBtn{
 				position: absolute;
@@ -138,8 +139,8 @@ export default {
 				right: 0;
 				top: 50%;
 				transform:translateY(-50%);
-				color: rgba(0, 0, 0, .5);
-				font-size: 20px;
+				color: @font-color-lighter;
+				font-size: @font-size-lg;
 			}
 		}
 	}
