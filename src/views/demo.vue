@@ -216,6 +216,9 @@
 
     <!--转盘抽奖-->
     <div class="item" @click="$router.push({path: '/lotteryTurn'})">转盘抽奖</div>
+
+    <!--楼层导航-->
+    <div class="item" @click="$router.push({path: '/tabFloor'})">楼层导航</div>
   </div>
 </template>
 

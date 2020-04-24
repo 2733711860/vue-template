@@ -172,5 +172,15 @@ export default [
     meta: {
       title: '转盘抽奖'
     }
+  },
+  {
+    path: '/tabFloor',
+    name: 'tabFloor',
+    component: resolve => {
+      require(['@/views/tabFloor/index.vue'], resolve)
+    },
+    meta: {
+      title: '楼层导航'
+    }
   }
 ]

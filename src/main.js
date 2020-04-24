@@ -8,6 +8,7 @@ import "./assets/css/index.less";
 import $axios from "@/utils/request";
 //import mixin from "./mixin/index";
 import store from "./store/index";
+import jquery from './utils/jquery' // jquery
 
 // 接口请求
 import {post,get,patch,put} from './api/http.js'
@@ -75,5 +76,6 @@ Vue.config.productionTip = false
 new Vue({
   store,
   router,
+  jquery,
   render: h => h(App)
 }).$mount("#app")
