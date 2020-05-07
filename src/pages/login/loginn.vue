@@ -42,13 +42,13 @@
 		methods: {
 			login() {
 				this.massege = '欢迎您'
-				$('form').fadeOut(500);
-				$('.wrapper').addClass('form-success');
-//				setTimeout(() => {
-//					this.$router.push({
-//						name:'HelloWorld'
-//					})
-//				}, 1000)
+				$('form').fadeOut(500)
+				$('.wrapper').addClass('form-success')
+				setTimeout(() => {
+					this.$router.push({
+						path: '/homePage'
+					})
+				}, 2500)
 			}
 		},
 	}
