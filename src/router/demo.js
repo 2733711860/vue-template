@@ -1,9 +1,5 @@
 export default [
   {
-    path: '*',
-    redirect: '/demo'
-  },
-  {
     path: '/demo',
     name: 'demo',
     component: resolve => {

@@ -1,1 +1,2 @@
-export const SET_TOKEN = 'SET_TOKEN' // token
+export const SET_PLAYLIST = 'SET_PLAYLIST' // 当前播放列表
+

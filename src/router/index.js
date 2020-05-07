@@ -3,13 +3,14 @@ import Router from "vue-router";
 import store from "../store/index";
 
 import demo from './demo.js' // 演示页面
-
+import login from './login.js' // 演示页面
 
 Vue.use(Router);
 
 const router = new Router({
 	routes: [
-    ...demo
+    ...demo,
+    ...login,
   ]
 })
 

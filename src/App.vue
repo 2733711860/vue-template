@@ -14,23 +14,23 @@ export default {
 
   computed: {
   	...mapGetters([
-  		'token'
+//		'token'
   	])
   },
 
   created() {
-  	this.setToken('vuex存储token值')
-  	console.log(this.token)
+//	this.setToken('vuex存储token值')
+//	console.log(this.token)
   },
 
   methods: {
-  	...mapMutations({
+//	...mapMutations({
 //			setToken: 'SET_TOKEN'
-  	}),
-
-  	...mapActions([
-  		'setToken'
-  	])
+//	}),
+//
+//	...mapActions([
+//		'setToken'
+//	])
   }
 };
 </script>

@@ -1,6 +1,6 @@
 import * as types from './mutation-types'
 
-// token
-export const setToken = function({ commit }, token) {
-  commit(types.SET_TOKEN, token)
+// 当前播放列表
+export const setPlaylist = function({ commit }, playlist) {
+  commit(types.SET_PLAYLIST, playlist)
 }

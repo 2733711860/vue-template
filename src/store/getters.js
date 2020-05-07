@@ -1,5 +1,6 @@
-// token
-export const token = state => state.token
+// 当前播放列表
+export const playlist = state => state.playlist
+
 
 
 
