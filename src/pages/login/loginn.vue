@@ -13,7 +13,7 @@
 				<form class="form">
 					<input type="text" placeholder="Username">
 					<input type="password" placeholder="Password">
-					<button type="submit" id="login-button" @click="login">Login</button>
+					<button type="submit" id="login-button" @click="flogin">Login</button>
 				</form>
 			</div>
 		</div>
@@ -38,17 +38,33 @@
 		components: {
 		},
 		mounted() {
+			this.getCheckCode()
 		},
 		methods: {
-			login() {
+			async getCheckCode () {
+				await this.$get(this.$api.getCheckCode).then(data => {
+					console.log(data)
+		    })
+			},
+			async flogin() {
 				this.massege = '欢迎您'
 				$('form').fadeOut(500)
 				$('.wrapper').addClass('form-success')
-				setTimeout(() => {
-					this.$router.push({
-						path: '/homePage'
-					})
-				}, 2500)
+
+				let param = {
+		  		user_id: '1',
+		  		user_pwd: '1',
+		  		code: '验证码',
+		  		code_token: ''
+		  	}
+		  	await this.$post(this.$api.login, param).then(data => {
+					console.log(data)
+					setTimeout(() => {
+						this.$router.push({
+							path: '/homePage'
+						})
+					}, 2500)
+		    })
 			}
 		},
 	}

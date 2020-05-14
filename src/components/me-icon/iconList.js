@@ -51,5 +51,8 @@ export const iconList = {
 	'pass': 'fa-unlock-alt', // 锁，密码
 	'add': 'fa-plus', // +号
 	'select-down': 'fa-caret-down', // 选择框的下箭头
+	'arrow-left': 'fa-arrow-circle-o-left',
+	'thumbs-up': 'fa-thumbs-o-up', // 点赞
+	'thumbs-down': 'fa-thumbs-o-down', // 不点赞
 }
 

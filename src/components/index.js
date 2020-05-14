@@ -35,6 +35,7 @@ import meProgress from './me-progress'
 import meTable from './me-table'
 import meLottery from './me-lottery'
 import meLotteryTurn from './me-lottery-turn'
+import meImageView from './me-image-view'
 
 // 定义组件集合
 const components = {
@@ -73,7 +74,8 @@ const components = {
 	meProgress,
 	meTable,
 	meLottery,
-	meLotteryTurn
+	meLotteryTurn,
+	meImageView
 }
 
 // 全局注册组件

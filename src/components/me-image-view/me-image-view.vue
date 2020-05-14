@@ -1,49 +1,32 @@
 <template>
-	<div :class="['left_slide_center_nav', {'show' : showPopu}]">
-    <!--蒙层-->
-    <div class="center_mask" @click="closePopup"></div>
-    <div :class="['center_content', 'center_content_' + position, contentClass]" :style="{width: popupWidth}">
-    	<slot></slot>
-    </div>
-</div>
+	<div>
+		<img v-lazy="imgSrc" @click="showBig(imgSrc)" style="width: 100%;" />
+
+		<div :class="['left_slide_center_nav', {'show' : showPopu}]" @click="closePopup">
+	    <!--蒙层-->
+	    <div :class="['image_center_content', 'center_content_right']">
+				<img :src="bigImgSrc" />
+	    </div>
+		</div>
+	</div>
 </template>
 
 <script>
-/*可从上、下、左、右、中间五个方位弹出来：position取值为：left、top、right、bottom、center*/
 export default {
-	name: 'mePopup',
+	name: 'meImageView',
 	data () {
 		return {
-			showPopu: false
+			showPopu: false,
+			bigImgSrc: ''
 		}
 	},
 	props: {
-		position: {
+		imgSrc: {
 			type: String,
-			default: 'right'
-		},
-		value: false,
-		popupWidth: {
-			type: String,
-			default: '70%'
-		},
-		contentClass: {
-			type: String,
-			default: null
+			default: ''
 		}
 	},
 	watch: {
-		showPopu (val) {
-      this.$emit('input', val)
-    },
-		value (val) {
-			if (val) {
-				document.body.setAttribute('style', 'overflow: hidden;')
-			} else {
-				document.body.setAttribute('style', 'overflow: auto;')
-			}
-			this.showPopu = val
-		}
 	},
 	mounted () {
 		this.showPopu = this.value
@@ -52,26 +35,19 @@ export default {
 		closePopup () {
 			this.showPopu = false
 		},
+
+		showBig (item) {
+			this.bigImgSrc = item
+			this.showPopu = true
+		}
 	}
 }
 </script>
 
 <style scoped="scoped" lang="less">
 @import url("../../assets/css/index.less");
-/**蒙层*/
-.left_slide_center_nav .center_mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: @me-bg-overlay;
-  z-index: 1000;
-  display: none;
-}
-
 /**内容*/
-.left_slide_center_nav .center_content {
+.left_slide_center_nav .image_center_content {
   position: fixed;
   transition: all .4s;
   -moz-transition: all .4s;
@@ -79,14 +55,15 @@ export default {
   -o-transition: all .4s;
   -os-transition: all .4s;
   z-index: 1001;
-  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
   overflow-y: scroll;
-  background: @me-bg-normal;
-}
-
-/**显示蒙层和内容 使用父级.show样式控制*/
-.left_slide_center_nav.show .center_mask {
-  display: block;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+  	max-width: 100%;
+  	max-height: 100%;
+  }
 }
 
 /*左侧弹出*/
@@ -107,7 +84,7 @@ export default {
 .left_slide_center_nav .center_content_right{
 	-os-transform: translateX(100%);
   transform: translateX(100%);
-  width: 70%;
+  width: 100%;
   right: 0;
   top: 0;
   bottom: 0;

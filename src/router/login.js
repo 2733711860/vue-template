@@ -10,7 +10,7 @@ export default [
       require(['@/pages/login/loginn.vue'], resolve)
     },
     meta: {
-      title: 'login'
+      title: 'loginn'
     }
   },
   {
@@ -20,7 +20,11 @@ export default [
       require(['@/pages/login/homePage.vue'], resolve)
     },
     meta: {
-      title: 'homePage'
+      title: 'homePage',
+      hasTop: {
+      	hasLeft: false,
+      	hasRight: false
+      }
     }
   }
 ]

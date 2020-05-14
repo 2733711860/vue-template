@@ -4,6 +4,8 @@
 			<viewer :images="imgList">
 				<img v-for="(xx, index) in imgList" :src="xx" :key="index" />
 			</viewer>
+
+			<me-image-view imgSrc="https://picsum.photos/300/200?image=1038" style="width: 50px;"></me-image-view>
 		</div>
 	</div>
 </template>

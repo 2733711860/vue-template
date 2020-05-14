@@ -1,5 +1,5 @@
 import Vue from "vue";
-// import "vant/lib/index.css";
+import "vant/lib/index.css";
 import App from "./App.vue";
 import router from "./router/index";
 // import "@/assets/style/font/iconfont.css";
@@ -32,9 +32,20 @@ Vue.use(VueTouch, {
 // 图片懒加载
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {
-  error: require('./assets/img/404.jpg'),
+	preload: 1.3, // 预加载高度比例
+  error: require('./assets/img/404.jpg'), // 图片路径出错时加载图片 此处
+//loading: loadingImg, // 预加载图片
+  attempt: 1, // 尝试加载图片数量
+  observer: true,
+  observerOptions: {
+    rootMargin: '0px',
+    threshold: 0.1
+  }
+
+
+//error: require('./assets/img/404.jpg'),
 //loading: require('./assets/img/octocat-spinner-128.gif'),
-  attempt: 1
+//attempt: 1
 })
 
 // 图片预览

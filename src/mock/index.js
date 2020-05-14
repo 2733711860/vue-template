@@ -25,6 +25,15 @@ const data={
   "float": "@float(60, 100, 2, 2)",  //随机生成浮点数，参数分别为整数部分最小值和最大值、小数部分保留最小位数和最大位数
 };
 
+import { entryData } from './data/data1.js'
+import { imagePageData } from './data/data2.js'
+import { imageList } from './data/data3.js'
+import { getWordImage } from './data/data4.js'
+
 Mock.mock(/\/mockTest/, data)
+Mock.mock(/\/getEntry/, entryData)
+Mock.mock(/\/getImagePage/, imagePageData)
+Mock.mock(/\/searchImage/, imageList)
+Mock.mock(/\/getWordImage/, getWordImage)
 
 export default Mock

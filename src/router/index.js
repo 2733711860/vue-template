@@ -3,7 +3,8 @@ import Router from "vue-router";
 import store from "../store/index";
 
 import demo from './demo.js' // 演示页面
-import login from './login.js' // 演示页面
+import login from './login.js' // 登录模块
+import image from './image.js' // 图片模块
 
 Vue.use(Router);
 
@@ -11,6 +12,7 @@ const router = new Router({
 	routes: [
     ...demo,
     ...login,
+    ...image
   ]
 })
 

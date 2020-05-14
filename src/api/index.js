@@ -24,6 +24,12 @@ switch (process.env.NODE_ENV) {
 export { baseUrl }
 export default {
   // **系统管理**开始
+  login: baseUrl + '/api/user/login', // 用户登陆
+  getCheckCode: baseUrl + '/api/other/getCheckCode', // 获取验证码
   top_list: baseUrl + '/top/list',
-  mockTest: baseUrl + '/api/mockTest'
+  mockTest: baseUrl + '/api/mockTest',
+  getEntry: baseUrl + '/api/getEntry',
+  getImagePage: baseUrl + '/api/getImagePage',
+  searchImage: baseUrl + '/api/searchImage',
+  getWordImage: baseUrl + '/api/getWordImage',
 }
