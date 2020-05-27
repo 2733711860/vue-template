@@ -170,6 +170,16 @@ export default [
     }
   },
   {
+    path: '/scrach',
+    name: 'scrach',
+    component: resolve => {
+      require(['@/views/scrach/index.vue'], resolve)
+    },
+    meta: {
+      title: '刮刮乐'
+    }
+  },
+  {
     path: '/tabFloor',
     name: 'tabFloor',
     component: resolve => {
